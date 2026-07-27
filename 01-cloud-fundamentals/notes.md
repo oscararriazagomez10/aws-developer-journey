@@ -20,6 +20,9 @@ A Region is a geographic area where AWS has multiple data centers.
 
 An Availability Zone is an isolated data center inside an AWS Region.
 
+<img width="1429" height="810" alt="image" src="https://github.com/user-attachments/assets/12f2f9dc-f33b-4e52-a98b-8fbdc62efb43" />
+
+
 ---
 
 ## Difference between Scalability and Elasticity
