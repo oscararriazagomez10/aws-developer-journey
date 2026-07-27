@@ -10,6 +10,9 @@ AWS (Amazon Web Services) is a cloud platform that provides infrastructure and s
 
 A Region is a geographic area where AWS has multiple data centers.
 
+<img width="891" height="566" alt="image" src="https://github.com/user-attachments/assets/aa799ee4-966b-41bc-92b6-957a63004375" />
+
+
 
 ---
 
