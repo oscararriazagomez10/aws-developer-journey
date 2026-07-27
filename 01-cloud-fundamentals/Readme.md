@@ -1,7 +1,5 @@
 # AWS Cloud Fundamentals ☁️
 
-# ☁️ AWS Cloud Fundamentals
-
 ## Descripción
 
 Este módulo recoge los conceptos fundamentales de Cloud Computing y Amazon Web Services.
