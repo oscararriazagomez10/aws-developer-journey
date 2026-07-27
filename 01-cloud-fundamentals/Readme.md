@@ -1,16 +1,37 @@
 # AWS Cloud Fundamentals ☁️
 
-## Objetivo
+# ☁️ AWS Cloud Fundamentals
 
-Aprender los fundamentos de Amazon Web Services y Cloud Computing.
+## Descripción
 
-## Conceptos aprendidos
+Este módulo recoge los conceptos fundamentales de Cloud Computing y Amazon Web Services.
 
-- Qué es Cloud Computing
-- Regiones AWS
-- Availability Zones
-- Modelo de responsabilidad compartida
-- Seguridad básica en AWS
+Antes de utilizar servicios como EC2, S3 o Lambda es necesario comprender cómo funciona la infraestructura cloud y por qué las empresas la utilizan.
+
+---
+
+## Objetivos
+
+- Comprender Cloud Computing
+- Entender la infraestructura global de AWS
+- Diferenciar regiones y Availability Zones
+- Conocer las ventajas del modelo cloud
+
+---
+
+## Competencias adquiridas
+
+✔ Comprensión de la arquitectura básica de AWS
+
+✔ Capacidad para explicar el modelo Cloud
+
+✔ Conocimiento de la infraestructura global de Amazon
+
+---
+
+## Estado
+
+✅ Completado
 
 ## Regíones
 
