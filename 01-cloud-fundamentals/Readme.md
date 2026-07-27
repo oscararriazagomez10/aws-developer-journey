@@ -12,14 +12,9 @@ Aprender los fundamentos de Amazon Web Services y Cloud Computing.
 - Modelo de responsabilidad compartida
 - Seguridad básica en AWS
 
-## Configuración inicial realizada
+## Regíones
 
-✅ Cuenta AWS creada
+Los nombres de las diferentes regiones pueden ser us-east-1,eu-west-3 dependiendo de donde se situen.
 
-✅ MFA activado
+<img width="1000" height="625" alt="image" src="https://github.com/user-attachments/assets/1d6eb51a-bfe2-4a2f-adce-25c4fd1e40b4" />
 
-✅ Seguridad de cuenta configurada
-
-## Estado
-
-En progreso 🚀
