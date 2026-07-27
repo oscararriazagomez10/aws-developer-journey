@@ -1,36 +1,57 @@
-# AWS Cloud Fundamentals ☁️
+# ☁️ AWS Cloud Fundamentals
 
-## Descripción
+## Overview
 
-Este módulo recoge los conceptos fundamentales de Cloud Computing y Amazon Web Services.
+This module introduces the fundamental concepts of Cloud Computing and Amazon Web Services (AWS).
 
-Antes de utilizar servicios como EC2, S3 o Lambda es necesario comprender cómo funciona la infraestructura cloud y por qué las empresas la utilizan.
-
----
-
-## Objetivos
-
-- Comprender Cloud Computing
-- Entender la infraestructura global de AWS
-- Diferenciar regiones y Availability Zones
-- Conocer las ventajas del modelo cloud
+Understanding these concepts is essential before working with AWS services such as EC2, S3, Lambda or RDS.
 
 ---
 
-## Competencias adquiridas
+## Learning Objectives
 
-✔ Comprensión de la arquitectura básica de AWS
-
-✔ Capacidad para explicar el modelo Cloud
-
-✔ Conocimiento de la infraestructura global de Amazon
+- Understand Cloud Computing concepts.
+- Learn how AWS infrastructure is organized.
+- Understand Regions and Availability Zones.
+- Learn the AWS Shared Responsibility Model.
+- Understand scalability and elasticity.
 
 ---
 
-## Estado
+## Concepts Learned
 
-✅ Completado
+### Cloud Computing
 
+A model that provides computing resources through the Internet on demand.
+
+### AWS Global Infrastructure
+
+AWS infrastructure is organized into:
+
+- Regions
+- Availability Zones
+- Edge Locations
+
+### Shared Responsibility Model
+
+AWS is responsible for security **of** the cloud.
+
+Customers are responsible for security **in** the cloud.
+
+---
+
+## Skills Acquired
+
+✅ Cloud Computing fundamentals  
+✅ AWS Infrastructure concepts  
+✅ High Availability concepts  
+✅ Scalability concepts  
+
+---
+
+## Status
+
+Completed ✅
 ## Regíones
 
 Los nombres de las diferentes regiones pueden ser us-east-1,eu-west-3 dependiendo de donde se situen, donde la mayoria de servicios de AWS son de ambito regional.
