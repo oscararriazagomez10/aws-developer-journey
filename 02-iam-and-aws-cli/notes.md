@@ -159,7 +159,7 @@ They allow more specific permissions.
 
 An IAM Role is a identity that provides temporany permissions to users, applications or AWS services.
 
-Unlike users, rolews do not have permanent credentials.
+Unlike users, role do not have permanent credentials.
 
 ---
 
