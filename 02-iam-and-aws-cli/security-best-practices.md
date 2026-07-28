@@ -1,4 +1,4 @@
-# 🔐 AWS Security Best Practices
+#  AWS Security Best Practices
 
 ## Overview
 
