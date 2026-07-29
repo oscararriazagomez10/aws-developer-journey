@@ -50,7 +50,7 @@ aws sts get-caller-identity
 
 Evidence:
 
-![AWS CLI Authentication](screenshots/aws-cli.png)
+![AWS CLI Authentication](Screenshots/aws-cli.png)
 
 ---
 
