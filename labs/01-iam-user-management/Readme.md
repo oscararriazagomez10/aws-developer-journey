@@ -40,17 +40,20 @@ The detailed list of AWS CLI commands is available in:
 
 --- 
 
-## Evidence 
+## Evidence
 
-This lab includes screenshots demonstrating:
+The evidence folder contains screenshots demonstrating the successful completion of this lab.
 
-- IAM Dashboard
-- IAM Users
-- IAM Groups
-- IAM Policies
-- AWS CLI Configuration
-- AWS CLI Authentication
+The following tasks were documented:
 
+- IAM user creation.
+- IAM group configuration.
+- Policy assignment.
+- AWS CLI authentication.
+
+Detailed evidence:
+
+[evidence.md](evidence.md)
 ---
 
 ## Skills Practiced
