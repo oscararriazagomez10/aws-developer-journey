@@ -14,7 +14,7 @@ A new IAM user was created successfully.
 
 Evidence:
 
-![IAM User Creation](screenshots/iam-users.png)
+![IAM User Creation](Screenshots/iam-users.PNG)
 
 ---
 
@@ -24,7 +24,7 @@ An IAM group was created and permissions were assigned.
 
 Evidence:
 
-![IAM Group](screenshots/iam-groups.png)
+![IAM Group](Screenshots/iam-groups.PNG)
 
 ---
 
@@ -34,7 +34,7 @@ AWS managed policies were attached to provide the required permissions.
 
 Evidence:
 
-![IAM Policy](screenshots/policies.png)
+![IAM Policy](Screenshots/Policies.PNG)
 
 ---
 
