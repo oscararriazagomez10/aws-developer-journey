@@ -97,6 +97,8 @@ Delete an IAM user from the AWS account
 
 # IAM Group Management
 
+## List IAM Groups
+
 ```bash
 aws iam list-groups
 
