@@ -228,11 +228,11 @@ Display IAM-specific AWS CLI commands and options.
 
 During this lab, the following AWS CLI security practices were followed:
 
-Never share AWS Access Keys.
-Avoid storing credentials in source code.
-Use IAM users instead of Root credentials.
-Apply the Principle of Least Privilege.
-Remove unused resources after testing.
+- Never share AWS Access Keys.
+- Avoid storing credentials in source code.
+- Use IAM users instead of Root credentials.
+- Apply the Principle of Least Privilege.
+- Remove unused resources after testing.
 
 
 
