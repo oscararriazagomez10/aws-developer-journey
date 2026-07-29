@@ -2,9 +2,9 @@
 
 ## Overview
 
-This lab focuses on managig identities and permissions using AWS Identity and Access Management (IAM)
+This hands-on lab focuses on AWS Identity and Access Management (IAM), one of the core security services in AWS.
 
-The objective was to gain hands-on experience creating users, groups and policies while following AWS security best practices.
+The purpose of this lab is to gain practical experience creating and managing IAM users, groups, policies and configuring AWS CLI while following AWS security best practices.
 
 ---
 
