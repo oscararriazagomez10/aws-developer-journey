@@ -36,8 +36,7 @@ By completing this lab, I was able to:
 
 The detailed list of AWS CLI commands is available in:
 
-`commands.md´
-
+[commands.md](commands.md)
 --- 
 
 ## Evidence
