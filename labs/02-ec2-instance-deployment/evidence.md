@@ -5,7 +5,7 @@
 
 Amazon EC2 instance successfully deployed.
 
-![EC2 Instance](Screenshots/01-instance-created.png)
+![EC2 Instance](Screenshots/01-instance-created.PNG)
 
 
 ---
