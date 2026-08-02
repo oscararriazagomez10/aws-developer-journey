@@ -23,4 +23,4 @@ Successful SSH connection to the EC2 instance.
 
 Apache web server successfully deployed.
 
-![Web Server](screenshots/03-web-server-running.png)
+![Web Server](Screenshots/03-web-server-running.PNG)
