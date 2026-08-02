@@ -120,7 +120,7 @@ Example:
 
 EC2 Instance
 
-      |
+  |
 
 Encrypted EBS Volume
 
