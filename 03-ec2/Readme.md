@@ -80,7 +80,7 @@ The corresponding lab includes:
 
 ## Related Lab
 
-📁 `labs/02-ec2-instance-deployment-and-ssh`
+📁 `labs/02-ec2-instance-deployment`
 
 ---
 
