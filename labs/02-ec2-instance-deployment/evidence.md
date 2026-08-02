@@ -14,7 +14,7 @@ Amazon EC2 instance successfully deployed.
 
 Successful SSH connection to the EC2 instance.
 
-![SSH Connection](screenshots/02-ssh-connection.png)
+![SSH Connection](Screenshots/02-ssh-connection.PNG)
 
 
 ---
