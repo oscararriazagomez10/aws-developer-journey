@@ -117,6 +117,7 @@ Best practices:
 - Control access to stored data.
 
 Example:
+
 EC2 Instance
 
       |
