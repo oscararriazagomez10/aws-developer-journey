@@ -9,7 +9,7 @@ ssh -i web-lab-key.pem ec2-user @<PUBLIC-IP>
 
 ```
 
-## 2.Detect Blcok Devices
+## 2.Detect the EBS Volume
 
 List the block devices detected by the operating system.
 
