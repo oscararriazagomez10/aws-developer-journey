@@ -84,13 +84,18 @@ df -h /mnt/ebs-storage
 
 SSH
  ↓
+
 lsblk
  ↓
+
 Format
  ↓
+
 Mount
  ↓
+
 Write Data
  ↓
+
 Verify
 
