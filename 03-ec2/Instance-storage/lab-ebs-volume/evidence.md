@@ -6,6 +6,7 @@ This section documents the practical steps completed during the EBS storage lab.
 
 EC2 instance successfully created for the lab.
 
+![EC2 Instance Created](screenshots/01-instance-created.PNG)
 
 ## EBS Volume
 
