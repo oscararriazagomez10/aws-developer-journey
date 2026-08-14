@@ -80,22 +80,5 @@ ls -lah /mnt/ebs-storage
 df -h /mnt/ebs-storage
 ```
 
-## Command Workflow
 
-SSH
- ↓
-
-lsblk
- ↓
-
-Format
- ↓
-
-Mount
- ↓
-
-Write Data
- ↓
-
-Verify
 
