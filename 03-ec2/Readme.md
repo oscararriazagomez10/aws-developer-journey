@@ -62,4 +62,5 @@ EC2 Labs
 - [EC2 Instance Deployment](../labs/02-ec2-instance-deployment/)
 - [ELB + Auto Scaling](../labs/03-instance-storage/)
 - [Instance Storage](../labs/04-elb-asg/)
+
 Detailed technical notes and commands are available in [Notes](notes.md).
