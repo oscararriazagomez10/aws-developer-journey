@@ -1,150 +1,181 @@
 # EC2 Security Best Practices
 
-## 🔐 Overview
+## Overview
 
-Security is a critical part of managing EC2 instances in production environments.
+Securing Amazon EC2 requires multiple layers of protection across identity, networking, operating systems, storage, and monitoring.
 
-The main goals are:
+The goal is to follow the principle of least privilege while minimizing unnecessary network exposure.
 
-- Protect access to servers.
-- Reduce attack surface.
-- Follow the principle of least privilege.
-- Monitor and maintain infrastructure.
+## 1. Use Least-Privilege IAM Roles
 
----
+EC2 instances should use IAM roles instead of storing AWS access keys on the instance.
 
-# Identity and Access Management (IAM)
+Grant only the permissions required by the workload.
 
-## Use IAM Roles Instead of Access Keys
+For example, an instance that only needs Systems Manager should receive the appropriate Systems Manager permissions rather than broad administrative access.
 
-EC2 instances should use IAM Roles to access AWS services.
+## 2. Restrict Security Group Rules
 
-Avoid storing AWS credentials inside the server.
-
-Bad practice:
-
-Access Key
-+
-Secret Key
-stored on EC2
-
-
-Recommended:
-
-EC2 Instance
-
-  |
-
-IAM Role
-
-  |
-
-AWS Services
-
-
-Benefits:
-
-- More secure authentication.
-- Automatic credential rotation.
-- Better permission management.
-
----
-
-# Secure SSH Access
-
-SSH is commonly used to access Linux EC2 instances.
-
-Best practices:
-
-- Use SSH key pairs.
-- Do not use passwords.
-- Restrict SSH access to trusted IP addresses.
-- Never expose SSH to everyone.
+Security Groups should allow only the traffic required by the application.
 
 Example:
-Allowed:
 
-My IP → Port 22
-
+```text
+HTTP  → TCP 80
+HTTPS → TCP 443
+SSH   → TCP 22
+```
 Avoid:
 
-0.0.0.0/0 → Port 22
+SSH → 0.0.0.0/0
 
----
+whenever possible.
 
-# Security Groups
+SSH should normally be restricted to a trusted IP address or replaced with Systems Manager Session Manager.
 
-Security Groups act as virtual firewalls for EC2 instances.
+3. Avoid Unnecessary Public Exposure
 
-Best practices:
+EC2 instances should not have public Internet access unless it is required.
 
-- Allow only required ports.
-- Remove unused rules.
-- Follow the principle of least privilege.
+A common architecture is:
 
-Example:
+Internet
+   |
+   v
+Application Load Balancer
+   |
+   v
+Private EC2 Instances
 
-HTTP → Port 80
-HTTPS → Port 443
-SSH → Port 22
+The Load Balancer handles public traffic while the EC2 instances remain protected from direct Internet access.
 
-Only open services that are necessary.
+## 4. Use Systems Manager Session Manager
 
---- 
+Session Manager can provide secure administrative access without requiring inbound SSH.
 
-# Operating System Updates
+Advantages include:
 
-Keeping the operating system updated reduces security risks.
+No inbound port 22 required
+No SSH key management
+IAM-based access control
+Centralized session management
+Integration with AWS Systems Manager
+## 5. Protect SSH Access
 
-Example:
+If SSH is required:
 
-```bash
-sudo yum update -y
-```
-Recommended:
+Use key-based authentication.
+Restrict the source IP.
+Avoid exposing port 22 to the entire Internet.
+Protect private keys.
+Never commit private keys to GitHub.
 
-- Apply security patches regularly.
-- Remove unnecessary software.
-- Monitor vulnerabilities.
+Example of a restricted rule:
 
-# Data Protection
-EC2 storage should be protected.
+Type: SSH
+Protocol: TCP
+Port: 22
+Source: Trusted IP
+## 6. Keep the Operating System Updated
 
-Best practices:
+Operating system packages should be regularly updated to address security vulnerabilities.
 
-- Use encrypted EBS volumes.
-- Create regular snapshots.
-- Control access to stored data.
+For Amazon Linux:
 
-Example:
+sudo dnf update -y
 
-EC2 Instance
+Updates should be tested appropriately before being deployed to production environments.
 
-  |
+## 7. Use Secure AMIs
 
-Encrypted EBS Volume
+Use trusted and maintained AMIs.
 
-# Monitoring and Logging
-Production EC2 environments should be monitored.
+Consider:
 
-Recommended services:
+Official AWS AMIs
+Regular security updates
+Minimal installed software
+Removal of unnecessary services
+## 8. Protect EBS Volumes
 
-- Amazon CloudWatch.
-- AWS CloudTrail.
+EBS volumes should be encrypted whenever appropriate.
 
-Monitor:
+Encryption helps protect data at rest.
 
-- CPU usage.
-- Network activity.
-- Instance status.
-- Security events.
+Important considerations include:
 
-# Cost and Security Optimization.
-Good security practices also improve cost management.
+Enable EBS encryption.
+Use appropriate AWS KMS keys when required.
+Control access to snapshots.
+Avoid sharing snapshots unnecessarily.
+## 9. Protect Instance Metadata
 
-Examples:
+EC2 Instance Metadata Service should be configured securely.
 
-- Remove unused instances.
-- Delete unused volumes.
-- Use appropriate instance sizes.
-- Monitor resource consumption.
+Where supported, prefer IMDSv2 to help reduce the risk of metadata credential exposure.
+
+## 10. Avoid Hard-Coded Credentials
+
+Never store AWS access keys, passwords, or other sensitive credentials directly in:
+
+Source code
+User Data
+Git repositories
+Configuration files
+
+Use AWS IAM roles and appropriate secret-management services instead.
+
+## 11. Monitor EC2 Instances
+
+Use AWS monitoring and logging services to detect unusual activity.
+
+Useful services include:
+
+Amazon CloudWatch
+AWS CloudTrail
+AWS Systems Manager
+Amazon GuardDuty
+
+Monitoring helps identify operational and security issues.
+
+## 12. Follow the Principle of Least Privilege
+
+Every component should have only the permissions it requires.
+
+This applies to:
+
+IAM users
+IAM roles
+Security Groups
+Applications
+AWS services
+
+Reducing unnecessary permissions limits the potential impact of a security incident.
+
+Security Checklist
+
+Before deploying an EC2 workload, verify:
+
+ IAM roles use least privilege.
+ Security Groups allow only required traffic.
+ SSH is restricted or replaced with Session Manager.
+ Unnecessary public access is disabled.
+ EBS volumes are encrypted when appropriate.
+ The operating system is updated.
+ No credentials are hard-coded.
+ Trusted AMIs are used.
+ Monitoring is enabled.
+ Sensitive information is not committed to GitHub.
+
+##Key Takeaways
+
+EC2 security should be implemented as a layered approach.
+
+The most important principles are:
+
+Least-privilege access.
+Minimal network exposure.
+Secure instance access.
+Encryption of sensitive data.
+Regular updates.
+Continuous monitoring.
