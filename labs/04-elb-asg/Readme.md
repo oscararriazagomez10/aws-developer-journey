@@ -104,19 +104,25 @@ The Launch Template defines the configuration used to launch EC2 instances, incl
 
 The Auto Scaling Group maintains the required EC2 capacity and manages the instances registered with the Target Group.
 
-![Auto Scaling Group](evidence/06-.png)
+![Auto Scaling Group](evidence/06-asg-instance.png)
+
 ## 7. Auto Scaling Replacement
 
 After terminating an EC2 instance, the Auto Scaling Group automatically launched a replacement instance.
+
+![Auto Scaling Group](evidence/07-asg-replacement.png)
 
 ## 8. IAM and Systems Manager
 
 The EC2 instances use an IAM role that allows management through AWS Systems Manager Session Manager.
 
+![IAM and Systems Manager](evidence/08-iam-ssm-role.png)
+
 ## 9. ALB Application Test
 
 The application was successfully accessed through the Application Load Balancer DNS name.
 
+![ALB Application Test](evidence/09-alb-working.png)
 
 
 # The final environment provides a highly available web application where traffic is distributed across healthy EC2 instances and failed instances can be automatically replaced by the Auto Scaling Group.
