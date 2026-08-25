@@ -100,7 +100,7 @@ echo "<h1>Hello from EC2</h1>" > /var/www/html/index.html
 
 User Data is useful for automating initial instance configuration.
 
-8. Instance Metadata
+## 8. Instance Metadata
 
 EC2 Instance Metadata provides information about a running instance.
 
@@ -113,7 +113,7 @@ IAM role information
 
 The Instance Metadata Service is available from within the EC2 instance.
 
-9. Storage
+## 9. Storage
 
 EC2 instances can use different types of storage.
 
@@ -134,7 +134,7 @@ Instance Store provides temporary block-level storage physically associated with
 
 Instance Store data is ephemeral and can be lost when the instance is stopped, terminated, or the underlying host is replaced.
 
-10. Networking
+## 10. Networking
 
 EC2 instances can have:
 
