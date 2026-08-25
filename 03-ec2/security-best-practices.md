@@ -152,22 +152,22 @@ AWS services
 
 Reducing unnecessary permissions limits the potential impact of a security incident.
 
-Security Checklist
+## Security Checklist
 
 Before deploying an EC2 workload, verify:
 
- IAM roles use least privilege.
- Security Groups allow only required traffic.
- SSH is restricted or replaced with Session Manager.
- Unnecessary public access is disabled.
- EBS volumes are encrypted when appropriate.
- The operating system is updated.
- No credentials are hard-coded.
- Trusted AMIs are used.
- Monitoring is enabled.
- Sensitive information is not committed to GitHub.
+- IAM roles use least privilege.
+- Security Groups allow only required traffic.
+- SSH is restricted or replaced with Session Manager.
+- Unnecessary public access is disabled.
+- EBS volumes are encrypted when appropriate.
+- The operating system is updated.
+- No credentials are hard-coded.
+- Trusted AMIs are used.
+- Monitoring is enabled.
+- Sensitive information is not committed to GitHub.
 
-##Key Takeaways
+## Key Takeaways
 
 EC2 security should be implemented as a layered approach.
 
