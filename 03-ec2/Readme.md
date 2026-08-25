@@ -52,16 +52,15 @@ Key pairs can be used for SSH authentication.
 Systems Manager Session Manager provides secure instance access without requiring SSH.
 Least-privilege permissions should be used for IAM roles.
 
-More information is available in security-best-practices.md.
+For more information, see [Security Best Practices](security-best-practices.md).
 
 Practical Labs
 
 The practical EC2 exercises are maintained separately in the labs/ directory.
 
 EC2 Labs
-EC2 Instance Deployment
-ELB + Auto Scaling
-Instance Storage
-Notes
+- [EC2 Instance Deployment](../labs/02-ec2-instance-deployment/)
+- [ELB + Auto Scaling](../labs/03-elb-asg/)
+- [Instance Storage](../labs/04-instance-storage/)
 
-Detailed technical notes and commands are available in notes.md.
+Detailed technical notes and commands are available in [Notes](notes.md).
