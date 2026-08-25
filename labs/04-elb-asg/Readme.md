@@ -104,7 +104,7 @@ The Launch Template defines the configuration used to launch EC2 instances, incl
 
 The Auto Scaling Group maintains the required EC2 capacity and manages the instances registered with the Target Group.
 
-![Auto Scaling Group](evidence/06-asg-instance.png)
+![Auto Scaling Group](evidence/06-asg-instances.png)
 
 ## 7. Auto Scaling Replacement
 
