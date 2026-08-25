@@ -1,45 +1,67 @@
-# Amazon EC2 Fundamentals
+# Amazon EC2
 
-## 📌 Module Overview
+## Overview
 
-Amazon Elastic Compute Cloud (EC2) is an AWS service that provides scalable virtual servers in the cloud.
+Amazon Elastic Compute Cloud (EC2) provides resizable compute capacity in the AWS Cloud.
 
-EC2 allows developers and cloud engineers to deploy applications using configurable compute resources.
+This module covers the fundamentals of launching, configuring, securing, and managing EC2 instances.
 
----
+## Topics Covered
 
-## 🎯 Learning Objectives
-
-In this module, I learned:
-
-- How EC2 instances work.
-- How to launch and configure virtual servers.
-- How to connect to instances using SSH.
-- How Security Groups control network access.
-- How EBS provides persistent storage.
-- Basic EC2 security and cost considerations.
-
----
-
-## 📂 Module Contents
-
-| File | Description |
-|---|---|
-| notes.md | EC2 fundamental concepts and architecture |
-| security-best-practices.md | Security recommendations for production environments |
-| lab-ec2-web-server | Hands-on deployment of an EC2 web server |
-
----
-
-## 🏗️ Technologies Covered
-
-- Amazon EC2
-- AMI
-- Instance Types
+- EC2 fundamentals
+- Amazon Machine Images (AMIs)
+- Instance types
+- Instance lifecycle
+- Key pairs
 - Security Groups
-- SSH
-- EBS Storage
-- AWS CLI
-## Status
+- User Data
+- Instance metadata
+- EBS storage
+- Instance storage concepts
+- Public and private IP addresses
+- SSH and Systems Manager Session Manager
+- High availability with Elastic Load Balancing
+- Auto Scaling fundamentals
 
-✅ Completed
+## EC2 Architecture
+
+An EC2 instance is composed of several important components:
+
+```text
+                     Amazon EC2
+                         |
+        +----------------+----------------+
+        |                |                |
+       AMI         Instance Type     Security Group
+        |                |                |
+        +----------------+----------------+
+                         |
+                    EC2 Instance
+                         |
+              +----------+----------+
+              |                     |
+          Root Volume          Additional EBS
+```
+## Security
+
+EC2 security depends on several AWS components:
+
+Security Groups control network traffic.
+IAM controls permissions and access to AWS resources.
+Key pairs can be used for SSH authentication.
+Systems Manager Session Manager provides secure instance access without requiring SSH.
+Least-privilege permissions should be used for IAM roles.
+
+More information is available in security-best-practices.md.
+
+Practical Labs
+
+The practical EC2 exercises are maintained separately in the labs/ directory.
+
+EC2 Labs
+EC2 Instance Deployment
+ELB + Auto Scaling
+Instance Storage
+Notes
+
+Detailed technical notes and commands are available in notes.md.
