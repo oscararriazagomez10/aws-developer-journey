@@ -33,7 +33,7 @@ whenever possible.
 
 SSH should normally be restricted to a trusted IP address or replaced with Systems Manager Session Manager.
 
-3. Avoid Unnecessary Public Exposure
+## 3. Avoid Unnecessary Public Exposure
 
 EC2 instances should not have public Internet access unless it is required.
 
