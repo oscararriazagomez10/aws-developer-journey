@@ -85,7 +85,7 @@ If the primary database becomes unavailable, RDS can automatically fail over to 
 
 Multi-AZ is primarily a high availability and failover feature, not a read-scaling solution.
 
-# 5. Read Replicas
+## 5. Read Replicas
 
 Read Replicas are used to scale read-heavy workloads.
 
@@ -99,7 +99,7 @@ A primary database replicates data to one or more read replicas.
 
 Applications can send read requests to the replicas while writes continue to use the primary database.
 
-## Cross-Region Read Replicas
+### Cross-Region Read Replicas
 
 A Read Replica can also be created in another AWS Region.
 
@@ -112,20 +112,20 @@ This can be useful for:
 Cross-Region replication is asynchronous.
 
 ---
-# 6. RDS Backups
+## 6. RDS Backups
 
 RDS provides automated backups that can be used for point-in-time recovery.
 
 Automated backups include transaction logs and allow a database to be restored to a specific point within the configured backup retention period.
 
- ## DB Snapshots
+ ### DB Snapshots
 
 DB snapshots are manually initiated backups of an RDS database.
 
 Snapshots can be retained for long-term storage and can be used to create a new DB instance.
 
 ---
-# 7. Parameter Groups
+## 7. Parameter Groups
 
 DB Parameter Groups are used to configure database engine parameters.
 
@@ -138,7 +138,7 @@ This forces connections to use secure transport.
 Different database engines have different parameters and configuration options.
 
 ---
-# 8. IAM Database Authentication
+## 8. IAM Database Authentication
 
 IAM Database Authentication allows applications to authenticate to supported RDS databases using AWS IAM instead of traditional database passwords.
 
@@ -149,8 +149,9 @@ Supported engines include:
 - PostgreSQL
 
 IAM Database Authentication can reduce the need to manage long-lived database passwords.
+
 ---
-# 9. SSL/TLS Connections
+## 9. SSL/TLS Connections
 
 RDS supports encrypted connections between applications and databases.
 
@@ -163,13 +164,13 @@ For PostgreSQL, SSL connections can be enforced using the appropriate RDS parame
 Encryption in transit protects database traffic from being transmitted in plaintext.
 
 ---
-# 10. Amazon Aurora
+## 10. Amazon Aurora
 
 Amazon Aurora is a relational database service compatible with MySQL and PostgreSQL.
 
 Aurora is designed specifically for the AWS Cloud and provides high availability, scalability, and distributed storage.
 
-## Aurora Cluster
+### Aurora Cluster
 
 An Aurora cluster normally consists of:
 
@@ -189,7 +190,7 @@ The Writer instance handles write operations.
 Reader instances can handle read operations.
 
 ---
-# 11. Aurora Replicas
+## 11. Aurora Replicas
 
 Aurora Replicas provide read scaling and improve availability.
 
@@ -198,15 +199,15 @@ Applications can send read traffic to Aurora Replicas while the Writer handles w
 If the Writer fails, Aurora can automatically promote an appropriate Replica to become the new Writer.
 
 ---
-# 12. Aurora Endpoints
+## 12. Aurora Endpoints
 
 Aurora provides different endpoints for connecting applications to the cluster.
 
-## Cluster Endpoint
+### Cluster Endpoint
 
 Used for connections to the current Writer.
 
-## Reader Endpoint
+### Reader Endpoint
 
 Used for read-only connections and can distribute connections across Aurora Replicas.
 
@@ -215,7 +216,7 @@ Used for read-only connections and can distribute connections across Aurora Repl
 Custom endpoints can be configured to connect applications to specific subsets of instances.
 
 ---
-# 13. Aurora Storage
+## 13. Aurora Storage
 
 Aurora uses a distributed storage architecture.
 
@@ -229,7 +230,7 @@ This allows Aurora to provide:
 - Fast recovery
 
 ---
-# 14. Aurora Serverless
+## 14. Aurora Serverless
 
 Aurora Serverless provides an on-demand database architecture where compute capacity can automatically adjust based on workload.
 
@@ -238,7 +239,7 @@ It is useful for workloads with variable or unpredictable traffic.
 Aurora Serverless can reduce the need to manually provision database capacity.
 
 ---
-# 15. Aurora Global Database
+## 15. Aurora Global Database
 
 Aurora Global Database is designed for globally distributed applications and disaster recovery.
 
@@ -256,7 +257,7 @@ Secondary Region
 The primary cluster handles writes while secondary Regions can provide read access and disaster recovery capabilities.
 
 ---
-# 16. Amazon ElastiCache
+## 16. Amazon ElastiCache
 
 Amazon ElastiCache is a managed in-memory caching service.
 
@@ -279,7 +280,7 @@ ElastiCache
 
 This can reduce database load and improve application performance.
 
-# 17. Redis / Valkey
+## 17. Redis / Valkey
 
 Redis and Valkey are in-memory data stores that support advanced features such as:
 
@@ -297,7 +298,7 @@ They can be used for:
 - Frequently accessed data
 
 ---
-# 18. Redis Cluster Mode
+## 18. Redis Cluster Mode
 
 Redis/Valkey can operate with Cluster Mode enabled or disabled.
 
@@ -313,7 +314,7 @@ There is a single primary shard with replicas.
 
 This architecture supports read scaling through replicas.
 
-## Cluster Mode Enabled
+### Cluster Mode Enabled
 
 Data can be distributed across multiple shards.
 
@@ -326,7 +327,7 @@ Data can be distributed across multiple shards.
 Cluster Mode Enabled provides horizontal scaling by distributing data across shards.
 
 ---
-# 19. Memcached
+## 19. Memcached
 
 Memcached is a simple, high-performance in-memory caching system.
 
@@ -339,27 +340,27 @@ Memcached is useful when:
 - Advanced persistence or replication features are not required.
 
 ---
-# 20. RDS vs Aurora vs ElastiCache
+## 20. RDS vs Aurora vs ElastiCache
 | Service     | Main Purpose                        | Type       |
 | ----------- | ----------------------------------- | ---------- |
 | RDS         | Managed relational database         | Relational |
 | Aurora      | Cloud-optimized relational database | Relational |
 | ElastiCache | In-memory caching                   | Cache      |
 
-## RDS
+### RDS
 
 Choose RDS when you need a managed traditional relational database engine.
 
-## Aurora
+### Aurora
 
 Choose Aurora when you need a highly available and scalable relational database optimized for AWS.
 
-## ElastiCache
+### ElastiCache
 
 Choose ElastiCache when you need very fast access to frequently used data and want to reduce database load.
 
 ---
-# 21. High Availability vs Read Scaling
+## 21. High Availability vs Read Scaling
 
 A common exam distinction is:
 
@@ -371,7 +372,7 @@ Primarily provides:
 - Automatic failover
 - Standby infrastructure
 
-## Read Replicas
+### Read Replicas
 
 Primarily provide:
 
@@ -388,7 +389,7 @@ Read Replica
 Read Scaling
 
 ---
-# 22. Disaster Recovery
+## 22. Disaster Recovery
 
 For regional disaster recovery, a database can be replicated to another AWS Region.
 
