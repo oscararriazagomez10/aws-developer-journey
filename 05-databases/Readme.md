@@ -104,12 +104,13 @@ Database security is based on multiple layers including:
 - Authentication
 - Least-privilege access
 
-Detailed security recommendations are available in Security Best Practices.
+Detailed security recommendations are available in [Security Best Practices](security-best-practices.md).
 
-Documentation
-Database Notes
-Security Best Practices
+# Documentation
 
+[Security Best Practices](security-best-practices.md)
+
+[Notes](notes.md)
 #  Practical Work
 
 This module currently contains theoretical and conceptual learning.
