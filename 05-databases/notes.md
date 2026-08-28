@@ -130,9 +130,9 @@ Snapshots can be retained for long-term storage and can be used to create a new 
 DB Parameter Groups are used to configure database engine parameters.
 
 For example, MySQL can use:
-
+```
 require_secure_transport = ON
-
+```
 This forces connections to use secure transport.
 
 Different database engines have different parameters and configuration options.
@@ -156,9 +156,9 @@ IAM Database Authentication can reduce the need to manage long-lived database pa
 RDS supports encrypted connections between applications and databases.
 
 For MySQL, secure transport can be enforced using:
-
+```
 require_secure_transport = ON
-
+```
 For PostgreSQL, SSL connections can be enforced using the appropriate RDS parameter.
 
 Encryption in transit protects database traffic from being transmitted in plaintext.
