@@ -91,7 +91,7 @@ Read Replicas are used to scale read-heavy workloads.
 
 A primary database replicates data to one or more read replicas.
 
-              Primary DB
+                  Primary DB
                   |
         +---------+---------+
         |                   |
