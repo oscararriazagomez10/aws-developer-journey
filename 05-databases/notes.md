@@ -79,9 +79,9 @@ A typical architecture is:
 ```
 The standby instance is maintained in another Availability Zone.
 
-If the primary database becomes unavailable, RDS can automatically fail over to the standby.
----
-# Important
+If the primary database becomes unavailable, RDS can automatically fail over to the standby.---
+
+## Important
 
 Multi-AZ is primarily a high availability and failover feature, not a read-scaling solution.
 
@@ -185,7 +185,7 @@ The Writer instance handles write operations.
 
 Reader instances can handle read operations.
 ---
-11. Aurora Replicas
+# 11. Aurora Replicas
 
 Aurora Replicas provide read scaling and improve availability.
 
@@ -193,23 +193,23 @@ Applications can send read traffic to Aurora Replicas while the Writer handles w
 
 If the Writer fails, Aurora can automatically promote an appropriate Replica to become the new Writer.
 ---
-12. Aurora Endpoints
+# 12. Aurora Endpoints
 
 Aurora provides different endpoints for connecting applications to the cluster.
 
-Cluster Endpoint
+## Cluster Endpoint
 
 Used for connections to the current Writer.
 
-Reader Endpoint
+## Reader Endpoint
 
 Used for read-only connections and can distribute connections across Aurora Replicas.
 
-Custom Endpoints
+## Custom Endpoints
 
 Custom endpoints can be configured to connect applications to specific subsets of instances.
 ---
-13. Aurora Storage
+# 13. Aurora Storage
 
 Aurora uses a distributed storage architecture.
 
@@ -217,12 +217,12 @@ The storage layer is shared across the instances in the cluster.
 
 This allows Aurora to provide:
 
-High durability
-Automatic storage scaling
-Replication
-Fast recovery
+- High durability
+- Automatic storage scaling
+- Replication
+- Fast recovery
 ---
-14. Aurora Serverless
+# 14. Aurora Serverless
 
 Aurora Serverless provides an on-demand database architecture where compute capacity can automatically adjust based on workload.
 
@@ -230,7 +230,7 @@ It is useful for workloads with variable or unpredictable traffic.
 
 Aurora Serverless can reduce the need to manually provision database capacity.
 ---
-15. Aurora Global Database
+# 15. Aurora Global Database
 
 Aurora Global Database is designed for globally distributed applications and disaster recovery.
 
@@ -246,16 +246,16 @@ Secondary Region
 Secondary Region
 
 The primary cluster handles writes while secondary Regions can provide read access and disaster recovery capabilities.
-
-16. Amazon ElastiCache
+---
+# 16. Amazon ElastiCache
 
 Amazon ElastiCache is a managed in-memory caching service.
 
 It supports:
 
-Valkey
-Redis OSS
-Memcached
+- Valkey
+- Redis OSS
+- Memcached
 
 Caching allows applications to retrieve frequently accessed data from memory instead of repeatedly querying the database.
 
@@ -270,22 +270,23 @@ ElastiCache
 
 This can reduce database load and improve application performance.
 
-17. Redis / Valkey
+# 17. Redis / Valkey
 
 Redis and Valkey are in-memory data stores that support advanced features such as:
 
 Replication
-High availability
-Automatic failover
-Data structures
-Persistence options
+- High availability
+- Automatic failover
+- Data structures
+- Persistence options
 
 They can be used for:
 
-Caching
-Session storage
-Real-time applications
-Frequently accessed data
+- Caching
+- Session storage
+- Real-time applications
+- Frequently accessed data
+---
 18. Redis Cluster Mode
 
 Redis/Valkey can operate with Cluster Mode enabled or disabled.
@@ -302,7 +303,7 @@ There is a single primary shard with replicas.
 
 This architecture supports read scaling through replicas.
 
-Cluster Mode Enabled
+## Cluster Mode Enabled
 
 Data can be distributed across multiple shards.
 
@@ -313,7 +314,7 @@ Data can be distributed across multiple shards.
  Replicas Replicas Replicas
 
 Cluster Mode Enabled provides horizontal scaling by distributing data across shards.
-
+---
 19. Memcached
 
 Memcached is a simple, high-performance in-memory caching system.
@@ -322,44 +323,49 @@ It is designed primarily for caching and does not provide the same advanced capa
 
 Memcached is useful when:
 
-Simple caching is required.
-Data can be distributed across multiple nodes.
-Advanced persistence or replication features are not required.
+- Simple caching is required.
+- Data can be distributed across multiple nodes.
+- Advanced persistence or replication features are not required.
+---
 20. RDS vs Aurora vs ElastiCache
-Service	Main Purpose	Type
-RDS	Managed relational database	Relational
-Aurora	Cloud-optimized relational database	Relational
-ElastiCache	In-memory caching	Cache
-RDS
+| Service     | Main Purpose                        | Type       |
+| ----------- | ----------------------------------- | ---------- |
+| RDS         | Managed relational database         | Relational |
+| Aurora      | Cloud-optimized relational database | Relational |
+| ElastiCache | In-memory caching                   | Cache      |
+
+## RDS
 
 Choose RDS when you need a managed traditional relational database engine.
 
-Aurora
+## Aurora
 
 Choose Aurora when you need a highly available and scalable relational database optimized for AWS.
 
-ElastiCache
+## ElastiCache
 
 Choose ElastiCache when you need very fast access to frequently used data and want to reduce database load.
-
-21. High Availability vs Read Scaling
+---
+# 21. High Availability vs Read Scaling
 
 A common exam distinction is:
 
-Multi-AZ
+## Multi-AZ
 
 Primarily provides:
 
-High availability
-Automatic failover
-Standby infrastructure
-Read Replicas
+- High availability
+- Automatic failover
+- Standby infrastructure
+
+## Read Replicas
 
 Primarily provide:
 
-Read scaling
-Additional read capacity
-Cross-Region replication options
+- Read scaling
+- Additional read capacity
+- Cross-Region replication options
+
 Multi-AZ
    ↓
 High Availability
@@ -367,7 +373,8 @@ High Availability
 Read Replica
    ↓
 Read Scaling
-22. Disaster Recovery
+---
+# 22. Disaster Recovery
 
 For regional disaster recovery, a database can be replicated to another AWS Region.
 
@@ -381,18 +388,18 @@ Cross-Region Read Replica
 If the primary Region becomes unavailable, the replica can be promoted to become an independent database capable of handling reads and writes.
 
 For Aurora, Aurora Global Database can provide cross-Region replication and disaster recovery capabilities.
-
-Key Takeaways
-RDS is a managed relational database service.
-Multi-AZ provides high availability and automatic failover.
-Read Replicas provide read scaling.
-Cross-Region Read Replicas can support disaster recovery.
-RDS supports IAM Database Authentication for MySQL, MariaDB, and PostgreSQL.
-SSL/TLS can encrypt database connections.
-Aurora is a cloud-optimized relational database compatible with MySQL and PostgreSQL.
-Aurora Replicas provide read scaling and failover capabilities.
-Aurora Global Database supports cross-Region architectures.
-ElastiCache provides in-memory caching.
-Redis/Valkey supports advanced caching and replication features.
-Memcached provides simple distributed caching.
+---
+# Key Takeaways
+- RDS is a managed relational database service.
+- Multi-AZ provides high availability and automatic failover.
+- Read Replicas provide read scaling.
+- Cross-Region Read Replicas can support disaster recovery.
+- RDS supports IAM Database Authentication for MySQL, MariaDB, and PostgreSQL.
+- SSL/TLS can encrypt database connections.
+- Aurora is a cloud-optimized relational database compatible with MySQL and PostgreSQL.
+- Aurora Replicas provide read scaling and failover capabilities.
+- Aurora Global Database supports cross-Region architectures.
+- ElastiCache provides in-memory caching.
+- Redis/Valkey supports advanced caching and replication features.
+- Memcached provides simple distributed caching.
 Caching can reduce database load and improve application performance.
