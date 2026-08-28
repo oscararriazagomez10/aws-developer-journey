@@ -232,15 +232,15 @@ Database configurations should be reviewed regularly.
 
 Check:
 
-Public accessibility
-Security Group rules
-IAM permissions
-Encryption
-Backup configuration
-Multi-AZ configuration
-Parameter Groups
-Monitoring
-Network placement
+- Public accessibility
+- Security Group rules
+- IAM permissions
+- Encryption
+- Backup configuration
+- Multi-AZ configuration
+- Parameter Groups
+- Monitoring
+- Network placement
 
 Security should be continuously maintained rather than configured only during deployment.
 
