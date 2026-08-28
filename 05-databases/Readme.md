@@ -109,8 +109,8 @@ Detailed security recommendations are available in [Security Best Practices](sec
 # Documentation
 
 [Security Best Practices](security-best-practices.md)
-
 [Notes](notes.md)
+
 #  Practical Work
 
 This module currently contains theoretical and conceptual learning.
