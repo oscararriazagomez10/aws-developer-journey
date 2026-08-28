@@ -27,7 +27,7 @@ when they are not required.
 Whenever possible, databases should not be directly accessible from the public Internet.
 
 A common architecture is:
-
+```
 Internet
    |
    v
@@ -38,7 +38,7 @@ Application
    |
    v
 Private Database
-
+```
 RDS instances should normally be deployed in private subnets when public access is not required.
 
 # 3. Use Security Groups
