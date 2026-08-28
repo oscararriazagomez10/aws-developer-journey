@@ -268,7 +268,7 @@ It supports:
 - Memcached
 
 Caching allows applications to retrieve frequently accessed data from memory instead of repeatedly querying the database.
-
+```
 Application
      |
      v
@@ -277,7 +277,7 @@ ElastiCache
      | Cache miss
      v
    RDS
-
+```
 This can reduce database load and improve application performance.
 
 ## 17. Redis / Valkey
@@ -305,25 +305,25 @@ Redis/Valkey can operate with Cluster Mode enabled or disabled.
 Cluster Mode Disabled
 
 There is a single primary shard with replicas.
-
+```
              Primary
                 |
         +-------+-------+
         |       |       |
       Replica Replica Replica
-
+```
 This architecture supports read scaling through replicas.
 
 ### Cluster Mode Enabled
 
 Data can be distributed across multiple shards.
-
+```
        Cluster
      /    |    \
   Shard  Shard  Shard
     |      |      |
  Replicas Replicas Replicas
-
+```
 Cluster Mode Enabled provides horizontal scaling by distributing data across shards.
 
 ---
@@ -379,27 +379,28 @@ Primarily provide:
 - Read scaling
 - Additional read capacity
 - Cross-Region replication options
-
+```
 Multi-AZ
    ↓
 High Availability
-
+```
+```
 Read Replica
    ↓
 Read Scaling
-
+```
 ---
 ## 22. Disaster Recovery
 
 For regional disaster recovery, a database can be replicated to another AWS Region.
 
 For RDS:
-
+```
 Primary Region
       |
       v
 Cross-Region Read Replica
-
+```
 If the primary Region becomes unavailable, the replica can be promoted to become an independent database capable of handling reads and writes.
 
 For Aurora, Aurora Global Database can provide cross-Region replication and disaster recovery capabilities.
