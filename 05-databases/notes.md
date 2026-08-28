@@ -95,8 +95,7 @@ A primary database replicates data to one or more read replicas.
                   |
         +---------+---------+
         |                   |
-        v                   v
-   Read Replica        Read Replica
+    Read Replica        Read Replica
 
 Applications can send read requests to the replicas while writes continue to use the primary database.
 
