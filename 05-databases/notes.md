@@ -211,7 +211,7 @@ Used for connections to the current Writer.
 
 Used for read-only connections and can distribute connections across Aurora Replicas.
 
-## Custom Endpoints
+### Custom Endpoints
 
 Custom endpoints can be configured to connect applications to specific subsets of instances.
 
