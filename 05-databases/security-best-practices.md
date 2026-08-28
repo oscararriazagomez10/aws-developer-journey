@@ -22,7 +22,7 @@ Resource: *
 ```
 when they are not required.
 
-# 2. Keep Databases Private
+## 2. Keep Databases Private
 
 Whenever possible, databases should not be directly accessible from the public Internet.
 
@@ -41,7 +41,7 @@ Private Database
 ```
 RDS instances should normally be deployed in private subnets when public access is not required.
 
-# 3. Use Security Groups
+## 3. Use Security Groups
 
 Security Groups should allow only the traffic required by the application.
 
@@ -61,7 +61,7 @@ Avoid rules such as:
 ```
 for database ports unless there is a specific and justified requirement.
 
-# 4. Encrypt Data at Rest
+## 4. Encrypt Data at Rest
 
 RDS and Aurora support encryption at rest.
 
@@ -71,7 +71,7 @@ AWS Key Management Service (AWS KMS) can be used to manage encryption keys.
 
 Encryption should be enabled when handling sensitive or regulated data.
 
-# 5. Encrypt Data in Transit
+## 5. Encrypt Data in Transit
 
 Database connections should use SSL/TLS whenever possible.
 
@@ -86,7 +86,7 @@ For MySQL RDS, secure transport can be enforced using:
 ```
 require_secure_transport = ON
 ```
-# 6. Use IAM Database Authentication When Appropriate
+## 6. Use IAM Database Authentication When Appropriate
 
 IAM Database Authentication allows supported RDS databases to authenticate users through AWS IAM.
 
@@ -100,7 +100,7 @@ This can reduce the need to distribute and manage long-lived database passwords.
 
 IAM policies should still follow least-privilege principles.
 
-# 7. Protect Database Credentials
+## 7. Protect Database Credentials
 
 Database credentials should never be hard-coded in:
 
@@ -113,7 +113,7 @@ AWS Secrets Manager can be used to securely store and manage database credential
 
 Applications can retrieve secrets at runtime using appropriate IAM permissions.
 
-# 8. Use Multi-AZ for High Availability
+## 8. Use Multi-AZ for High Availability
 
 For production workloads that require high availability, consider using RDS Multi-AZ.
 
@@ -133,7 +133,7 @@ Multi-AZ → High Availability
 
 Read Replica → Read Scaling
 
-# 9. Use Read Replicas Carefully
+## 9. Use Read Replicas Carefully
 
 Read Replicas can improve read scalability and can also be used as part of a disaster recovery strategy.
 
@@ -141,7 +141,7 @@ However, replication is asynchronous in many RDS configurations, so applications
 
 Read Replicas should not be considered a replacement for backups.
 
-# 10. Plan for Disaster Recovery
+## 10. Plan for Disaster Recovery
 
 A database should have a recovery strategy appropriate for its business requirements.
 
@@ -160,7 +160,7 @@ The strategy should consider:
 - Cost
 - Operational complexity
 
-# 11. Protect Backups and Snapshots
+## 11. Protect Backups and Snapshots
 
 Backups and snapshots can contain sensitive database information.
 
@@ -172,7 +172,7 @@ Protect them by:
 - Applying appropriate retention policies.
 - Avoiding unnecessary copies.
 
-# 12. Secure ElastiCache
+## 12. Secure ElastiCache
 
 ElastiCache should also be protected from unauthorized access.
 
@@ -186,7 +186,7 @@ Recommended practices include:
 - Using authentication features where available.
 - Applying least-privilege access.
 
-# 13. Redis / Valkey Security
+## 13. Redis / Valkey Security
 
 For Redis/Valkey workloads, consider:
 
@@ -207,7 +207,7 @@ Access should be restricted using Security Groups and network configuration.
 
 Because Memcached is primarily a caching system, applications should not rely on it as the authoritative source of persistent data.
 
-# 15. Monitor Database Activity
+## 15. Monitor Database Activity
 
 Database environments should be monitored for operational and security events.
 
@@ -226,7 +226,7 @@ Monitoring can help detect:
 - Performance problems
 - Resource failures
 
-# 16. Regularly Review Configuration
+## 16. Regularly Review Configuration
 
 Database configurations should be reviewed regularly.
 
