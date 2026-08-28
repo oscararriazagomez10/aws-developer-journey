@@ -125,7 +125,7 @@ DB snapshots are manually initiated backups of an RDS database.
 Snapshots can be retained for long-term storage and can be used to create a new DB instance.
 
 ---
-7. Parameter Groups
+# 7. Parameter Groups
 
 DB Parameter Groups are used to configure database engine parameters.
 
@@ -163,7 +163,7 @@ For PostgreSQL, SSL connections can be enforced using the appropriate RDS parame
 Encryption in transit protects database traffic from being transmitted in plaintext.
 
 ---
-10. Amazon Aurora
+# 10. Amazon Aurora
 
 Amazon Aurora is a relational database service compatible with MySQL and PostgreSQL.
 
@@ -297,7 +297,7 @@ They can be used for:
 - Frequently accessed data
 
 ---
-18. Redis Cluster Mode
+# 18. Redis Cluster Mode
 
 Redis/Valkey can operate with Cluster Mode enabled or disabled.
 
@@ -326,7 +326,7 @@ Data can be distributed across multiple shards.
 Cluster Mode Enabled provides horizontal scaling by distributing data across shards.
 
 ---
-19. Memcached
+# 19. Memcached
 
 Memcached is a simple, high-performance in-memory caching system.
 
@@ -339,7 +339,7 @@ Memcached is useful when:
 - Advanced persistence or replication features are not required.
 
 ---
-20. RDS vs Aurora vs ElastiCache
+# 20. RDS vs Aurora vs ElastiCache
 | Service     | Main Purpose                        | Type       |
 | ----------- | ----------------------------------- | ---------- |
 | RDS         | Managed relational database         | Relational |
