@@ -46,13 +46,13 @@ RDS instances should normally be deployed in private subnets when public access 
 Security Groups should allow only the traffic required by the application.
 
 For example:
-
+```
 Application Security Group
         |
         | TCP 5432
         v
 PostgreSQL RDS
-
+```
 The database Security Group should allow connections from the application's Security Group rather than from the entire Internet.
 
 Avoid rules such as:
@@ -77,10 +77,10 @@ Database connections should use SSL/TLS whenever possible.
 
 Encryption in transit protects data while it moves between:
 
-Applications
-RDS
-Aurora
-ElastiCache
+- Applications
+- RDS
+- Aurora
+- ElastiCache
 
 For MySQL RDS, secure transport can be enforced using:
 
