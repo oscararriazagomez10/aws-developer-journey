@@ -56,9 +56,9 @@ PostgreSQL RDS
 The database Security Group should allow connections from the application's Security Group rather than from the entire Internet.
 
 Avoid rules such as:
-
+```
 0.0.0.0/0
-
+```
 for database ports unless there is a specific and justified requirement.
 
 # 4. Encrypt Data at Rest
@@ -83,9 +83,9 @@ Encryption in transit protects data while it moves between:
 - ElastiCache
 
 For MySQL RDS, secure transport can be enforced using:
-
+```
 require_secure_transport = ON
-
+```
 # 6. Use IAM Database Authentication When Appropriate
 
 IAM Database Authentication allows supported RDS databases to authenticate users through AWS IAM.
@@ -118,7 +118,7 @@ Applications can retrieve secrets at runtime using appropriate IAM permissions.
 For production workloads that require high availability, consider using RDS Multi-AZ.
 
 Multi-AZ provides a standby database in another Availability Zone and supports automatic failover.
-
+```
 Region
  |
  +----------------------+
@@ -126,7 +126,7 @@ Region
  v                      v
 Primary AZ           Standby AZ
 RDS                    RDS
-
+```
 Multi-AZ should not be confused with Read Replicas.
 
 Multi-AZ → High Availability
