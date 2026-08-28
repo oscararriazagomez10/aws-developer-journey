@@ -110,6 +110,7 @@ This can be useful for:
 - Reducing read latency for users in another region
 
 Cross-Region replication is asynchronous.
+
 ---
 # 6. RDS Backups
 
@@ -122,6 +123,7 @@ Automated backups include transaction logs and allow a database to be restored t
 DB snapshots are manually initiated backups of an RDS database.
 
 Snapshots can be retained for long-term storage and can be used to create a new DB instance.
+
 ---
 7. Parameter Groups
 
@@ -134,6 +136,7 @@ require_secure_transport = ON
 This forces connections to use secure transport.
 
 Different database engines have different parameters and configuration options.
+
 ---
 # 8. IAM Database Authentication
 
@@ -158,6 +161,7 @@ require_secure_transport = ON
 For PostgreSQL, SSL connections can be enforced using the appropriate RDS parameter.
 
 Encryption in transit protects database traffic from being transmitted in plaintext.
+
 ---
 10. Amazon Aurora
 
@@ -183,6 +187,7 @@ An Aurora cluster normally consists of:
 The Writer instance handles write operations.
 
 Reader instances can handle read operations.
+
 ---
 # 11. Aurora Replicas
 
@@ -191,6 +196,7 @@ Aurora Replicas provide read scaling and improve availability.
 Applications can send read traffic to Aurora Replicas while the Writer handles write operations.
 
 If the Writer fails, Aurora can automatically promote an appropriate Replica to become the new Writer.
+
 ---
 # 12. Aurora Endpoints
 
@@ -207,6 +213,7 @@ Used for read-only connections and can distribute connections across Aurora Repl
 ## Custom Endpoints
 
 Custom endpoints can be configured to connect applications to specific subsets of instances.
+
 ---
 # 13. Aurora Storage
 
@@ -220,6 +227,7 @@ This allows Aurora to provide:
 - Automatic storage scaling
 - Replication
 - Fast recovery
+
 ---
 # 14. Aurora Serverless
 
@@ -228,6 +236,7 @@ Aurora Serverless provides an on-demand database architecture where compute capa
 It is useful for workloads with variable or unpredictable traffic.
 
 Aurora Serverless can reduce the need to manually provision database capacity.
+
 ---
 # 15. Aurora Global Database
 
@@ -245,6 +254,7 @@ Secondary Region
 Secondary Region
 
 The primary cluster handles writes while secondary Regions can provide read access and disaster recovery capabilities.
+
 ---
 # 16. Amazon ElastiCache
 
@@ -285,6 +295,7 @@ They can be used for:
 - Session storage
 - Real-time applications
 - Frequently accessed data
+
 ---
 18. Redis Cluster Mode
 
@@ -313,6 +324,7 @@ Data can be distributed across multiple shards.
  Replicas Replicas Replicas
 
 Cluster Mode Enabled provides horizontal scaling by distributing data across shards.
+
 ---
 19. Memcached
 
@@ -325,6 +337,7 @@ Memcached is useful when:
 - Simple caching is required.
 - Data can be distributed across multiple nodes.
 - Advanced persistence or replication features are not required.
+
 ---
 20. RDS vs Aurora vs ElastiCache
 | Service     | Main Purpose                        | Type       |
@@ -344,6 +357,7 @@ Choose Aurora when you need a highly available and scalable relational database 
 ## ElastiCache
 
 Choose ElastiCache when you need very fast access to frequently used data and want to reduce database load.
+
 ---
 # 21. High Availability vs Read Scaling
 
@@ -372,6 +386,7 @@ High Availability
 Read Replica
    ↓
 Read Scaling
+
 ---
 # 22. Disaster Recovery
 
@@ -387,6 +402,7 @@ Cross-Region Read Replica
 If the primary Region becomes unavailable, the replica can be promoted to become an independent database capable of handling reads and writes.
 
 For Aurora, Aurora Global Database can provide cross-Region replication and disaster recovery capabilities.
+
 ---
 # Key Takeaways
 - RDS is a managed relational database service.
