@@ -68,7 +68,7 @@ Multi-AZ is designed primarily for high availability and automatic failover.
 
 A typical architecture is:
 
-```text
+```
                 RDS
                  |
         +--------+--------+
@@ -90,13 +90,13 @@ Multi-AZ is primarily a high availability and failover feature, not a read-scali
 Read Replicas are used to scale read-heavy workloads.
 
 A primary database replicates data to one or more read replicas.
-
+```
                   Primary DB
                   |
         +---------+---------+
         |                   |
     Read Replica        Read Replica
-
+```
 Applications can send read requests to the replicas while writes continue to use the primary database.
 
 ### Cross-Region Read Replicas
@@ -173,7 +173,7 @@ Aurora is designed specifically for the AWS Cloud and provides high availability
 ### Aurora Cluster
 
 An Aurora cluster normally consists of:
-
+```
                  Aurora Cluster
                        |
              +---------+---------+
@@ -184,7 +184,7 @@ An Aurora cluster normally consists of:
              +---------+---------+
                        |
                 Aurora Storage
-
+```
 The Writer instance handles write operations.
 
 Reader instances can handle read operations.
@@ -244,7 +244,7 @@ Aurora Serverless can reduce the need to manually provision database capacity.
 Aurora Global Database is designed for globally distributed applications and disaster recovery.
 
 It allows an Aurora database to have secondary clusters in other AWS Regions.
-
+```
 Primary Region
       |
       | Global replication
@@ -253,7 +253,7 @@ Secondary Region
       |
       v
 Secondary Region
-
+```
 The primary cluster handles writes while secondary Regions can provide read access and disaster recovery capabilities.
 
 ---
@@ -341,6 +341,7 @@ Memcached is useful when:
 
 ---
 ## 20. RDS vs Aurora vs ElastiCache
+
 | Service     | Main Purpose                        | Type       |
 | ----------- | ----------------------------------- | ---------- |
 | RDS         | Managed relational database         | Relational |
