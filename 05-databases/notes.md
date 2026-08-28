@@ -106,9 +106,9 @@ A Read Replica can also be created in another AWS Region.
 
 This can be useful for:
 
-Disaster recovery
-Geographic expansion
-Reducing read latency for users in another region
+- Disaster recovery
+- Geographic expansion
+- Reducing read latency for users in another region
 
 Cross-Region replication is asynchronous.
 ---
@@ -142,9 +142,9 @@ IAM Database Authentication allows applications to authenticate to supported RDS
 
 Supported engines include:
 
-MySQL
-MariaDB
-PostgreSQL
+- MySQL
+- MariaDB
+- PostgreSQL
 
 IAM Database Authentication can reduce the need to manage long-lived database passwords.
 ---
