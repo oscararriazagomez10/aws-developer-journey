@@ -117,12 +117,13 @@ This module currently contains theoretical and conceptual learning.
 No dedicated practical lab has been added because no hands-on database laboratory was completed as part of this module.
 
 # Key Takeaways
-Amazon RDS provides managed relational databases.
-Multi-AZ improves database availability.
-Read Replicas provide read scalability.
-Cross-Region Read Replicas support disaster recovery.
-Aurora provides a highly available cloud-optimized relational database architecture.
-Aurora Replicas can improve read scalability and provide failover capabilities.
-ElastiCache provides in-memory caching.
-Redis/Valkey and Memcached are the main caching technologies covered.
-Database security requires encryption, controlled network access, authentication, and least privilege.
+
+- Amazon RDS provides managed relational databases.
+- Multi-AZ improves database availability.
+- Read Replicas provide read scalability.
+- Cross-Region Read Replicas support disaster recovery.
+- Aurora provides a highly available cloud-optimized relational database architecture.
+- Aurora Replicas can improve read scalability and provide failover capabilities.
+- ElastiCache provides in-memory caching.
+- Redis/Valkey and Memcached are the main caching technologies covered.
+- Database security requires encryption, controlled network access, authentication, and least privilege.
