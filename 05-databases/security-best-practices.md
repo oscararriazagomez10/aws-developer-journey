@@ -113,7 +113,7 @@ AWS Secrets Manager can be used to securely store and manage database credential
 
 Applications can retrieve secrets at runtime using appropriate IAM permissions.
 
-8. Use Multi-AZ for High Availability
+# 8. Use Multi-AZ for High Availability
 
 For production workloads that require high availability, consider using RDS Multi-AZ.
 
